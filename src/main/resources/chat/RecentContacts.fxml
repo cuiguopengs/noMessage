@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchor_pane" fx:id="anchor_pane" prefHeight="770.0" prefWidth="1199.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.RecentContacts">
+   <children>
+      <GridPane fx:id="grid_pane" layoutX="91.0" layoutY="59.0" prefHeight="557.0" prefWidth="1126.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1192.0" minWidth="10.0" prefWidth="1105.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="436.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="483.0" minHeight="10.0" prefHeight="481.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane fx:id="title_pane" prefHeight="63.0" prefWidth="1126.0" style="-fx-background-color: #FFEBCD;">
+               <children>
+                  <Label fx:id="title_label" layoutX="43.0" layoutY="17.0" prefHeight="31.0" prefWidth="77.0" text="Label" />
+                  <JFXButton fx:id="title_btn" layoutX="1037.0" layoutY="8.0" prefHeight="50.0" prefWidth="59.0" />
+               </children>
+            </AnchorPane>
+            <SplitPane id="split_pane" fx:id="split_pane" dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.rowIndex="1">
+              <items>
+                <ScrollPane fx:id="cnotent_pane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane fx:id="bottom_pane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <JFXTextArea id="bottom_textArea" fx:id="bottom_textArea" prefHeight="154.0" prefWidth="1041.0" />
+                        <JFXButton id="bottom_btn" fx:id="bottom_btn" layoutX="975.0" layoutY="182.0" prefHeight="14.0" prefWidth="47.0" style="-fx-background-color: #E6E6FA;" text="Button" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
